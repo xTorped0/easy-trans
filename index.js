@@ -19,3 +19,35 @@ L.geoJSON(polyobl.geometries, {
 	color: '#fead15',
 	dashArray: '3'
 }).addTo(map);
+
+const startAnimation = (entries, observer) => {
+  entries.forEach(entry => {
+    entry.target.classList.toggle("slide-in-from-right", entry.isIntersecting);
+		observer.unobserve(entry.target)
+  });
+};
+
+const options = { root: null, rootMargin: '0px', threshold: 1 }; 
+
+const elements = document.querySelectorAll('.title');
+elements.forEach(el => {
+	const observer = new IntersectionObserver(startAnimation);
+  observer.observe(el, options);
+});
+
+(function carousel(){
+	const items = document.querySelectorAll('.gallery img');
+	const indicators = document.querySelectorAll('.gallery .items .item');
+	const buttons = document.querySelectorAll('.gallery .controllers button')
+
+	buttons.forEach((btn, ind) => {
+		btn.onclick = () => {
+			items.forEach((item) => {
+				item.toggleAttribute('current')
+			}) 
+			indicators.forEach((item) => {
+				item.classList.toggle("current");
+			}) 
+		}
+	})
+})()
