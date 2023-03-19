@@ -6,11 +6,21 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title> EasyTrans </title>
 	<link rel="stylesheet" href="./index.css">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+	integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+	crossorigin=""/>
 </head>
 <body>
 	<div class="header">
-		<span>Inst: easy_trans.kyiv</span>
-		<a href="http://easytrans.com.ua/"> Сайт компанії </a>
+		<div>
+			<img src="./photos/logo1.png" alt="">
+			<img src="./photos/logo2.png" alt="">
+		</div>
+		<!-- <div class="space" /> -->
+		<div>
+			<a href="https://www.instagram.com/easy_trans.kyiv/">Instagram</a>
+			<a href="http://easytrans.com.ua/"> Сайт компанії </a>
+		</div>
 	</div>
 	<div class="main">
 		<div class="text_part">
@@ -46,10 +56,10 @@
 	</div>
 	<div class="about">
 		<div class="left">
-			<div class="title"> Спільний проект компанії EasyTrans та Спілки фахівців з нерухомого майна України. </div>
+			<div class="title"> Спільний проект компанії <span class="default">EasyTrans</span> та Спілки фахівців з нерухомого майна України. </div>
 			<p class="text"> 
 				Ваш клієнт може працювати на Вас, навіть після закриття успішної угоди. Ми гарантуємо безпеку під час переїздів. Будуємо для Наших клієнтів найкращу логістику та беремо організацію у свої руки. Клієнт з задоволенням п‘є каву, поки наша команда успішно вирішує всі організаційні питання переїзду .
-				Для цього нам потрібні саме Ви - ріелтори, адже Ви -  майстри продажу.
+				<span class="color bold"> Для цього нам потрібні саме Ви - ріелтори, адже Ви -  майстри продажу. </span>
 				Ми пропонуємо Вам стати частиною великого проекту, від якого наші спільні клієнти будуть кайфувати, а Ви будете отримувати від нашої компанії додатковий заробіток, а саме 12.5% від вартості переїзду, тільки за те, що порекомендували нашу компанію Вашому клієнту. 
 			</p>
 			<p class="sub-text"> 
@@ -63,7 +73,7 @@
 		<div class="right">
 			<div class="photo">
 				<img src="./photos/photo_2022-02-10_15-40-08.jpg" alt="our work"/>
-				<div class="text"> Переїзд офiсу </div>
+				<!-- <div class="text"> Переїзд офiсу </div> -->
 			</div>
 		</div>
 	</div>
@@ -86,13 +96,14 @@
 			Для багатьох клієнтів важливим фактором при виборі організації для переїзду залишається ціна. Якщо по вашій рекомендації  скористаються послугами компанії EasyTrans, то можете бути впевнені в тому, що всі роботи будуть проведені оперативно та якісно, а їх вартість приємно здивує навіть найвимогливішого клієнта. Наша компанія пропонує повний перелік послуг для здійснення переїздів будь-якої складності.
 			Пропонувати Наші послуги можна в Києві та області. Також організовуємо між обласні переїзди. Наприклад: Київ-Львів, Вінниця-Київ тощо.
 		</div>
+		<div id="map"></div>
 	</div>
 	<div class="bonus">
 		<div class="bonus_title">
 			Як отримати бонус від замовлення ?
 		</div>
 		<p class="text">
-			Коли Ви порекомендуєте Нашу компанію потенційному клієнту, потрібно проінформувати нас. Зробити це можна написавши нам у соціальні мережі Viber та Telegram  або зателефонувати (+380971149122). Якщо Ми  отримаємо замовлення але ніхто нас не сповістив про рекомендацію Ваш бонус автоматично буде відправлено на допомогу ЗСУ.
+			Коли Ви порекомендуєте Нашу компанію потенційному клієнту, потрібно проінформувати нас. Зробити це можна написавши нам у соціальні мережі Viber та <a href='https://t.me/easyytrans'>Telegram</a> або зателефонувати <a href="tel:+380679390105">+380971149122</a>. Якщо Ми  отримаємо замовлення але ніхто нас не сповістив про рекомендацію Ваш бонус автоматично буде відправлено на допомогу ЗСУ.
 		</p>
 	</div>
 	<div class="footer">
@@ -107,8 +118,13 @@
 			<a href="tel:+380679390105">+380679390105</a>
 		</div>
 		<div class="space"></div>
-		<span>Inst: easy_trans.kyiv</span>
+		<a href="https://www.instagram.com/easy_trans.kyiv/">Instagram</a>
 		<a href="http://easytrans.com.ua/"> Сайт компанії </a>
 	</div>
+	<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+	integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+	crossorigin=""></script>
+	<script src="poly.js"></script>
+	<script src="index.js"></script>
 </body>
 </html>

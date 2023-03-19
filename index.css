@@ -29,7 +29,8 @@ body::-webkit-scrollbar {
 
 	display: flex;
 	gap: .6rem;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
 
 	font-size: .6rem;
   font-weight: 600;
@@ -43,7 +44,20 @@ body::-webkit-scrollbar {
 	color: #FFFF;
 }
 
-.header span:before, .header a:before {
+.header div {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+
+.header img {
+	/* width: 3rem;
+  height: 1.5rem; */
+  width: 5rem;
+  height: 2.5rem;
+}
+
+.header a:before {
 	display: inline-block;
   position: relative;
   margin-right: 10px;
@@ -77,6 +91,10 @@ body::-webkit-scrollbar {
 
 span.color {
 	color: #fead15;
+}
+
+span.color.bold {
+	font-weight: bold;
 }
 
 .main  .sub {
@@ -358,17 +376,21 @@ span.color {
   position: absolute;
   width: 100%;
   height: 100%;
-  position: absolute;
   top: 0px;
   left: 0px;
   background-image: url(./photos/dot-black.png);
   opacity: .3;
+  pointer-events: none;
 }
 
 .bonus .bonus_title {
 	font-weight: 800;
   text-transform: uppercase;
 	color: #efefef;
+}
+
+.bonus .text a {
+  color: #efefef;
 }
 
 .bonus .text {
@@ -378,6 +400,12 @@ span.color {
   letter-spacing: 2px;
   line-height: normal;
 	font-size: 15px;
+}
+
+#map { 
+  margin: 1rem auto;
+  width: 60%;
+  height: 250px; 
 }
 
 .footer {
@@ -405,4 +433,8 @@ span.color {
 
 	font-weight: 500;
   letter-spacing: 2px;
+}
+
+.default {
+  text-transform: none;
 }
